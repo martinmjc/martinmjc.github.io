@@ -454,6 +454,10 @@ h1, h2, h3, h4 {
   border-color: var(--color-accent-light);
 }
 
+.publication-card.is-clickable {
+  cursor: pointer;
+}
+
 .publication-year {
   align-self: flex-start;
   font-size: 0.75rem;
@@ -583,6 +587,18 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   background: var(--color-accent);
   border: 3px solid var(--color-accent-soft);
+}
+
+/* El zoom se aplica a este contenedor interno (no a .timeline-item) para
+   que el punto de la línea de tiempo (::before) no se mueva ni se
+   deforme al escalar. */
+.timeline-content {
+  transform-origin: left top;
+  transition: transform var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: scale(1.05);
 }
 
 .timeline-period {

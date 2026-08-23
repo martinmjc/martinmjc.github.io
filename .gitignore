@@ -2,3 +2,6 @@
 
 # CV con datos personales (teléfono, correo personal) — no se publica en el repo público.
 referencias/
+
+# Configuración local de Claude Code, no forma parte del sitio.
+.claude/

@@ -125,6 +125,18 @@ function renderPublications() {
        <div class="publication-tags">${tagsHtml}</div>
        ${linkHtml}`
     );
+
+    // Hace clickeable todo el recuadro, no solo el enlace "View article".
+    if (pub.doi) {
+      card.classList.add("is-clickable");
+      card.addEventListener("click", (event) => {
+        // Si el clic fue directamente sobre un enlace (ej. "View article"),
+        // dejamos que ese enlace navegue por su cuenta, sin duplicar la acción.
+        if (event.target.closest("a")) return;
+        window.open(`https://doi.org/${pub.doi}`, "_blank", "noopener,noreferrer");
+      });
+    }
+
     container.appendChild(card);
   });
 }
@@ -186,10 +198,12 @@ function renderExperience() {
     const node = el(
       "div",
       "timeline-item",
-      `<span class="timeline-period">${item.period}</span>
-       <h3>${item.title}</h3>
-       <p class="timeline-place">${item.place}</p>
-       <p>${item.description}</p>`
+      `<div class="timeline-content">
+         <span class="timeline-period">${item.period}</span>
+         <h3>${item.title}</h3>
+         <p class="timeline-place">${item.place}</p>
+         <p>${item.description}</p>
+       </div>`
     );
     container.appendChild(node);
   });
