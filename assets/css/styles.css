@@ -315,8 +315,12 @@ h1, h2, h3, h4 {
   max-width: 560px;
 }
 
-.hero-affiliation strong {
-  color: var(--color-text);
+.hero-line {
+  display: block;
+}
+
+.hero-line + .hero-line {
+  margin-top: 0.35rem;
 }
 
 .research-tags {
@@ -388,47 +392,6 @@ h1, h2, h3, h4 {
     width: 160px;
     height: 160px;
   }
-}
-
-.research-lines {
-  display: grid;
-  gap: 1.1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.research-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.research-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.research-card .icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: var(--color-accent-soft);
-  color: var(--color-accent);
-  font-size: 1.1rem;
-  margin-bottom: 0.9rem;
-}
-
-.research-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
-}
-
-.research-card p {
-  font-size: 0.92rem;
-  color: var(--color-text-muted);
 }
 
 /* ---------- 6. Publications ---------- */
@@ -560,6 +523,29 @@ h1, h2, h3, h4 {
 }
 
 /* ---------- 8. Teaching / Timeline ---------- */
+.experience-groups {
+  display: grid;
+  gap: 3rem;
+}
+
+.experience-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .experience-groups {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
 .timeline {
   position: relative;
   max-width: 720px;

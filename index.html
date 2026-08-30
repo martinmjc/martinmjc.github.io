@@ -73,7 +73,8 @@
         <span class="hero-kicker reveal">Academic Portfolio</span>
         <h1 class="reveal" id="heroName"></h1>
         <p class="hero-affiliation reveal">
-          <strong id="heroRole"></strong> · <span id="heroAffiliation"></span>
+          <span class="hero-line" id="heroDegree"></span>
+          <span class="hero-line"><span id="heroRole"></span>, <span id="heroAffiliation"></span></span>
         </p>
 
         <div class="research-tags reveal" id="heroTags">
@@ -93,9 +94,10 @@
           <span class="eyebrow">About Me</span>
           <h2>Research Interests</h2>
           <p>
-            I work at the intersection of combinatorial optimization and
-            production system reliability, focusing on bio-inspired
-            algorithms applied to real-world manufacturing problems.
+            I work on decisions about physical assets under imperfect
+            information, combining reliability modelling with optimization
+            to turn the operational records that industrial plants
+            actually keep into decisions that can be defended.
           </p>
         </div>
 
@@ -110,10 +112,6 @@
               loading="lazy"
             />
             <p id="bioText"><!-- Biografía inyectada desde data.js --></p>
-          </div>
-
-          <div class="research-lines reveal" id="researchLines">
-            <!-- Tarjetas de líneas de investigación inyectadas desde data.js -->
           </div>
         </div>
       </div>
@@ -157,8 +155,24 @@
           <p>Academic training and relevant experience, in chronological order.</p>
         </div>
 
-        <div class="timeline reveal" id="experienceTimeline">
-          <!-- Ítems de la línea de tiempo inyectados desde data.js -->
+        <div class="experience-groups">
+          <div class="experience-group">
+            <h3 class="experience-group-title">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Academic
+            </h3>
+            <div class="timeline reveal" id="experienceAcademic">
+              <!-- Ítems de docencia inyectados desde data.js -->
+            </div>
+          </div>
+
+          <div class="experience-group">
+            <h3 class="experience-group-title">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i> Industry
+            </h3>
+            <div class="timeline reveal" id="experienceIndustry">
+              <!-- Ítems de industria inyectados desde data.js -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -175,9 +189,8 @@
         <div class="contact-grid">
           <div class="contact-info reveal">
             <p>
-              I'm open to academic collaborations, co-authorships, and
-              projects related to industrial optimization and
-              manufacturing systems reliability.
+              I'm open to academic collaborations, co-authorships,
+              research projects, and interdisciplinary opportunities.
             </p>
             <div class="contact-channels" id="contactChannels">
               <!-- Canales de contacto inyectados desde data.js -->

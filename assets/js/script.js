@@ -43,6 +43,7 @@ function iconClasses(icon) {
 
 function renderHero() {
   document.getElementById("heroName").textContent = PROFILE.name;
+  document.getElementById("heroDegree").textContent = PROFILE.baseCredential;
   document.getElementById("heroRole").textContent = PROFILE.role;
   // Solo se agrega el país (no la ciudad completa), porque el nombre de la
   // universidad en PROFILE.affiliation ya suele incluir la ciudad.
@@ -52,7 +53,7 @@ function renderHero() {
 
   const tagsContainer = document.getElementById("heroTags");
   PROFILE.researchLines.forEach((line) => {
-    tagsContainer.appendChild(el("span", "tag", line.title));
+    tagsContainer.appendChild(el("span", "tag", line));
   });
 
   const profilesContainer = document.getElementById("heroProfiles");
@@ -75,18 +76,6 @@ function renderHero() {
 
 function renderAbout() {
   document.getElementById("bioText").textContent = PROFILE.bio.trim().replace(/\s+/g, " ");
-
-  const container = document.getElementById("researchLines");
-  PROFILE.researchLines.forEach((line) => {
-    const card = el(
-      "article",
-      "research-card",
-      `<div class="icon"><i class="${iconClasses(line.icon)}" aria-hidden="true"></i></div>
-       <h3>${line.title}</h3>
-       <p>${line.description}</p>`
-    );
-    container.appendChild(card);
-  });
 }
 
 /* -------------------- Publicaciones -------------------- */
@@ -185,16 +174,20 @@ function renderProjects() {
 /* -------------------- Docencia / Experiencia -------------------- */
 
 function renderExperience() {
-  const container = document.getElementById("experienceTimeline");
+  renderExperienceGroup("experienceAcademic", EXPERIENCE.academic, "No academic experience listed yet.");
+  renderExperienceGroup("experienceIndustry", EXPERIENCE.industry, "No industry experience listed yet.");
+}
 
-  if (!EXPERIENCE.length) {
-    container.appendChild(
-      el("div", "empty-state", "Coming soon: teaching and professional experience.")
-    );
+/** Renderiza una lista de experiencia (académica o de industria) dentro de su contenedor. */
+function renderExperienceGroup(containerId, items, emptyMessage) {
+  const container = document.getElementById(containerId);
+
+  if (!items || !items.length) {
+    container.appendChild(el("div", "empty-state", emptyMessage));
     return;
   }
 
-  EXPERIENCE.forEach((item) => {
+  items.forEach((item) => {
     const node = el(
       "div",
       "timeline-item",
