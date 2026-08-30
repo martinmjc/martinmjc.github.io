@@ -5,3 +5,6 @@ referencias/
 
 # Configuración local de Claude Code, no forma parte del sitio.
 .claude/
+
+# Proyecto de investigación aparte, con su propio repositorio git.
+GCFP-MR/

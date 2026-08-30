@@ -17,7 +17,7 @@ const PROFILE = {
   affiliation: "Pontificia Universidad Católica de Valparaíso (PUCV)",
   location: "Valparaíso, Chile",
   email: "martin.jurado.c@mail.pucv.cl",
-  bio: `PhD Candidate in Industrial Engineering at the Pontificia Universidad Católica de Valparaíso (PUCV), working at the Asset Management Laboratory. My research addresses maintenance and spare parts decisions in capital-intensive industries, particularly mining, where reliability estimates must be built from sparse failure histories and largely unstructured maintenance records. I combine reliability and degradation modelling with mathematical programming, metaheuristics and machine learning, with a particular interest in how the operational information that plants already keep, including free-text work orders, can be turned into parameters that decision models can actually use. Before starting the PhD I led maintenance operations in industry, which is where these questions come from.`,
+  bio: `PhD Candidate in Industrial Engineering at the Pontificia Universidad Católica de Valparaíso (PUCV), working at the Asset Management Laboratory. My research addresses maintenance and spare parts decisions in capital-intensive industries, particularly mining, where reliability estimates must be built from sparse failure histories and largely unstructured maintenance records. I combine reliability and degradation modeling with mathematical programming, metaheuristics and machine learning. I am particularly interested in how the operational information that plants already keep, including free-text work orders, can be turned into parameters that decision models can actually use. Before starting the PhD I led maintenance operations in industry, which is where these questions come from.`,
   // Se usan como píldoras cortas debajo del nombre en el Hero.
   researchLines: ["Industrial Optimization", "Asset Management", "Reliability Engineering"],
   // Enlaces a perfiles académicos y redes profesionales.
@@ -121,21 +121,21 @@ const EXPERIENCE = {
     {
       period: "Aug 2026 – present",
       title: "Adjunct Professor",
-      place: "Universidad Católica Boliviana \"San Pablo\" Santa Cruz, Bolivia",
+      place: "Universidad Católica Boliviana \"San Pablo\", Santa Cruz, Bolivia",
       description:
         "Course: Industrial Simulation and Optimization in the Industrial Engineering Program, Department of Engineering and Exact Sciences.",
     },
     {
       period: "Aug 2025 – present",
       title: "Adjunct Professor",
-      place: "Universidad Católica Boliviana \"San Pablo\" Tarija, Bolivia",
+      place: "Universidad Católica Boliviana \"San Pablo\", Tarija, Bolivia",
       description:
         "Courses: Information Engineering and Industrial Simulation and Optimization in the Industrial Engineering Program, Department of Engineering and Exact Sciences; and Module 2, Multivariate Statistics, in the Postgraduate Diploma in Marketing Metrics and Research.",
     },
     {
       period: "Mar 2025",
       title: "Workshop Speaker",
-      place: "Universidad Católica Boliviana \"San Pablo\" Tarija, Bolivia",
+      place: "Universidad Católica Boliviana \"San Pablo\", Tarija, Bolivia",
       description:
         "Delivered the workshop \"Programming Solutions in Industrial Engineering\" for students and faculty at UCB's Tarija campus.",
     },
@@ -144,7 +144,7 @@ const EXPERIENCE = {
     {
       period: "Jan 2024 – Dec 2024",
       title: "Consultant",
-      place: "National Institute of Statistics (INE), Bolivia, La Paz, Bolivia",
+      place: "National Institute of Statistics (INE), La Paz, Bolivia",
       description:
         "Consultant for Bolivia's 2024 Population and Housing Census and Household Survey. Supervised a six-member team in data collection, verification, validation, and transcription.",
     },
